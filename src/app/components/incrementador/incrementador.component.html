@@ -1,0 +1,16 @@
+<div class="input-group">
+    <span class="input-group-btn">
+          <button [ngClass] = "btnClass" type="button" (click)="cambiarBarra(-5)">
+               <i class="fa fa-minus"></i>
+          </button>
+     </span>
+    <input type="number" class="form-control" [(ngModel)]="progreso" placeholder="Progreso" (ngModelChange)="onChange($event)" min="0" max="100" [ngClass]="{'is-invalid': progreso > 100 || progreso < 0}">
+    <!-- <div style="color: red;">
+        Solo numeros del 0-100
+    </div> -->
+    <span class="input-group-btn">
+          <button [ngClass] = "btnClass" type="button" (click)="cambiarBarra(5)">
+               <i class="fa fa-plus"></i>
+          </button>
+     </span>
+</div>
